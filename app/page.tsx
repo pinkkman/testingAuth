@@ -10,7 +10,7 @@ export default function Home() {
       <div style={{ padding: "40px" }}>
         <h2>Welcome {session.user?.name}</h2>
         <img src={session.user?.image || ""} alt="User Avatar" />
-        <button onClick={() => signOut()}>
+        <button className="text-black border rounded-2xl p-4 bg-red-500" onClick={() => signOut()}>
           Sign out
         </button>
       </div>
@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div style={{ padding: "40px" }}>
       <h2>You are not signed in</h2>
-      <button onClick={() => signIn("github")}>
+      <button className="text-black border rounded-2xl p-4 bg-cyan-400" onClick={() => signIn("github")}>
         Sign in with GitHub
       </button>
     </div>
